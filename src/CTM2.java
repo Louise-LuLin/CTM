@@ -16,7 +16,7 @@ import structures.MyPriorityQueue;
 import structures._RankItem;
 import utils.Utils;
 
-public class CTM {
+public class CTM2 {
 	protected int varMaxIter;
 	protected double varConverge;
 	protected double emMaxIter;
@@ -45,7 +45,7 @@ public class CTM {
 	public int len1;
 	public int len2;
 	
-	public CTM(int vocabulary_sizeArg, int number_of_topics, int varMaxIterArg, double varConvergeArg, 
+	public CTM2(int vocabulary_sizeArg, int number_of_topics, int varMaxIterArg, double varConvergeArg,
 			int emMaxIterArg, double emConvergeArg, double cgConvergeArg){
 		len1 = number_of_topics;
 		len2 = number_of_topics-1;
@@ -75,7 +75,7 @@ public class CTM {
 	}
 	
 
-	public CTM(double converge, double beta, ArrayList<_Doc> c, int number_of_topics, int varMaxIterArg, double varConvergeArg, double emMaxIterArg, double emConvergeArg, double cgConvergeArg){
+	public CTM2(double converge, double beta, ArrayList<_Doc> c, int number_of_topics, int varMaxIterArg, double varConvergeArg, double emMaxIterArg, double emConvergeArg, double cgConvergeArg){
 		int len1 = number_of_topics;
 		int len2 = number_of_topics-1;
 		

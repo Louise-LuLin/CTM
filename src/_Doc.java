@@ -45,4 +45,12 @@ public class _Doc{
 		
 		return value;
 	}
+
+	public double getTotalLength(){
+		double length = 0;
+		for(int i=0; i < wordCounts.length; i++){
+			length += wordCounts[i];
+		}
+		return length;
+	}
 }

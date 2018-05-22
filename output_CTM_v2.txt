@@ -1,1402 +1,430 @@
-maxLen: 724.0 minLen: 5.0 avgLen: 42.60511363636363
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/bin/java -Didea.launcher.port=7535 "-Didea.launcher.bin.path=/Applications/IntelliJ IDEA 15 CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath "/Users/lulin/Desktop/CTM/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Users/lulin/Desktop/CTM/libs/Jama-1.0.3.jar:/Applications/IntelliJ IDEA 15 CE.app/Contents/lib/idea_rt.jar" com.intellij.rt.execution.application.AppMain CTM
+maxLen: 382.0 minLen: 6.0 avgLen: 59.292099540951924
+size of features 6134
+Data loaded.
+Fold number 0
+Train Set Size 3336
+Test Set Size 803
 initial Model...
 initial stats...
-docID78
-docID354
-docID598
-docID598
-docID970
-docID970
-docID1497
-docID1516
-docID3290
-docID3290
-docID6005
-docID6124
-docID6124
-docID6124
-docID6448
-avg doc Len565.5fail doc size10
-Likelihood -3002616.203 at step 0.0 converge to 1.000000...
+avg doc LenNaNfail doc size0
+Likelihood -1763497.854 at step 0.0 converge to 1.000000...
 initial stats...
-docID514
-docID813
-docID1421
-docID1605
-docID1749
-docID3290
-docID3849
-docID3884
-docID5976
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6629
-docID6871
-avg doc Len355.15384615384613fail doc size13
-Likelihood -2195259.935 at step 1.0 converge to 0.268884...
+avg doc LenNaNfail doc size0
+Likelihood -1459803.745 at step 1.0 converge to 0.172211...
 initial stats...
-docID5
-docID78
-docID78
-docID78
-docID374
-docID374
-docID374
-docID374
-docID598
-docID598
-docID598
-docID598
-docID598
-docID602
-docID602
-docID615
-docID659
-docID698
-docID698
-docID790
-docID813
-docID813
-docID970
-docID970
-docID970
-docID1378
-docID1422
-docID1422
-docID1422
-docID1497
-docID1497
-docID1516
-docID1516
-docID1516
-docID1587
-docID1749
-docID1995
-docID2046
-docID2139
-docID2203
-docID3290
-docID3290
-docID3290
-docID3525
-docID3632
-docID3682
-docID3849
-docID3889
-docID3905
-docID4899
-docID4916
-docID5122
-docID5122
-docID5513
-docID5973
-docID6005
-docID6124
-docID6124
-docID6290
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6452
-docID6458
-docID6461
-docID6467
-docID6493
-docID6568
-docID6629
-docID6629
-docID6695
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len348.531914893617fail doc size47
-Likelihood -2160340.060 at step 2.0 converge to 0.015907...
+avg doc LenNaNfail doc size0
+Likelihood -1448427.246 at step 2.0 converge to 0.007793...
 initial stats...
-docID78
-docID78
-docID78
-docID78
-docID78
-docID354
-docID374
-docID447
-docID598
-docID598
-docID598
-docID598
-docID602
-docID602
-docID612
-docID622
-docID622
-docID652
-docID659
-docID813
-docID862
-docID968
-docID970
-docID970
-docID970
-docID1421
-docID1421
-docID1483
-docID1516
-docID1516
-docID1516
-docID1516
-docID1587
-docID1587
-docID1615
-docID1721
-docID1732
-docID1732
-docID1749
-docID1749
-docID1825
-docID1827
-docID3105
-docID3290
-docID3290
-docID3290
-docID3290
-docID3307
-docID3307
-docID3309
-docID3632
-docID3647
-docID3682
-docID3725
-docID3889
-docID3905
-docID3905
-docID4224
-docID5122
-docID5122
-docID5122
-docID5122
-docID5122
-docID5513
-docID5973
-docID5975
-docID6005
-docID6072
-docID6124
-docID6124
-docID6124
-docID6124
-docID6238
-docID6287
-docID6287
-docID6430
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6450
-docID6452
-docID6461
-docID6461
-docID6461
-docID6467
-docID6637
-docID6642
-docID6642
-docID6677
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len350.41818181818184fail doc size55
-Likelihood -2131330.825 at step 3.0 converge to 0.013428...
+avg doc LenNaNfail doc size0
+Likelihood -1438943.177 at step 3.0 converge to 0.006548...
 initial stats...
-docID5
-docID32
-docID55
-docID55
-docID78
-docID78
-docID354
-docID354
-docID354
-docID364
-docID374
-docID436
-docID437
-docID447
-docID456
-docID468
-docID577
-docID598
-docID598
-docID598
-docID598
-docID598
-docID599
-docID612
-docID652
-docID664
-docID698
-docID698
-docID813
-docID813
-docID813
-docID840
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1421
-docID1421
-docID1501
-docID1516
-docID1537
-docID1544
-docID1555
-docID1721
-docID1732
-docID1732
-docID1749
-docID2005
-docID2046
-docID2068
-docID2139
-docID2139
-docID2199
-docID3290
-docID3290
-docID3290
-docID3290
-docID3307
-docID3319
-docID3525
-docID3647
-docID3682
-docID3682
-docID3725
-docID3849
-docID3889
-docID4224
-docID5122
-docID5122
-docID5122
-docID5122
-docID5122
-docID5469
-docID5513
-docID5973
-docID6072
-docID6124
-docID6290
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6454
-docID6454
-docID6454
-docID6454
-docID6454
-docID6454
-docID6458
-docID6467
-docID6477
-docID6493
-docID6517
-docID6517
-docID6630
-docID6630
-docID6654
-docID6695
-docID6695
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len329.4307692307692fail doc size65
-Likelihood -2108840.652 at step 4.0 converge to 0.010552...
+avg doc LenNaNfail doc size0
+Likelihood -1429336.867 at step 4.0 converge to 0.006676...
 initial stats...
-docID55
-docID78
-docID78
-docID78
-docID78
-docID78
-docID131
-docID354
-docID354
-docID376
-docID376
-docID598
-docID598
-docID598
-docID602
-docID671
-docID698
-docID698
-docID712
-docID813
-docID813
-docID871
-docID970
-docID970
-docID970
-docID1421
-docID1421
-docID1497
-docID1497
-docID1516
-docID1516
-docID1516
-docID1588
-docID1732
-docID1749
-docID1816
-docID1841
-docID1841
-docID2139
-docID3290
-docID3290
-docID3307
-docID3330
-docID3632
-docID3633
-docID3679
-docID3712
-docID3849
-docID4224
-docID4224
-docID4224
-docID4941
-docID5122
-docID5122
-docID5122
-docID5122
-docID5513
-docID5513
-docID5513
-docID6124
-docID6124
-docID6124
-docID6287
-docID6290
-docID6290
-docID6290
-docID6430
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6450
-docID6454
-docID6454
-docID6461
-docID6467
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-docID6970
-avg doc Len379.95652173913044fail doc size46
-Likelihood -2091532.267 at step 5.0 converge to 0.008208...
+avg doc LenNaNfail doc size0
+Likelihood -1419188.292 at step 5.0 converge to 0.007100...
 initial stats...
-docID11
-docID55
-docID55
-docID78
-docID78
-docID78
-docID78
-docID78
-docID78
-docID354
-docID364
-docID598
-docID612
-docID612
-docID698
-docID712
-docID712
-docID799
-docID813
-docID813
-docID813
-docID871
-docID966
-docID970
-docID970
-docID1421
-docID1421
-docID1448
-docID1516
-docID1516
-docID1516
-docID1516
-docID1629
-docID1732
-docID1732
-docID1749
-docID2219
-docID2897
-docID2897
-docID3290
-docID3290
-docID3290
-docID3290
-docID3290
-docID3290
-docID3632
-docID3632
-docID3633
-docID3849
-docID4224
-docID4224
-docID5122
-docID5122
-docID5122
-docID5497
-docID5513
-docID6005
-docID6124
-docID6290
-docID6290
-docID6430
-docID6430
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6461
-docID6477
-docID6493
-docID6517
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len382.64285714285717fail doc size42
-Likelihood -2078687.732 at step 6.0 converge to 0.006141...
+avg doc LenNaNfail doc size0
+Likelihood -1408706.082 at step 6.0 converge to 0.007386...
 initial stats...
-docID78
-docID78
-docID78
-docID353
-docID374
-docID374
-docID437
-docID447
-docID598
-docID602
-docID612
-docID620
-docID622
-docID675
-docID698
-docID799
-docID813
-docID813
-docID862
-docID871
-docID966
-docID970
-docID970
-docID970
-docID1421
-docID1516
-docID1516
-docID1516
-docID1516
-docID1587
-docID1732
-docID1732
-docID1732
-docID1749
-docID1827
-docID1990
-docID1990
-docID2068
-docID2126
-docID3137
-docID3290
-docID3290
-docID3307
-docID3309
-docID3309
-docID3325
-docID3633
-docID3711
-docID3711
-docID3779
-docID5122
-docID5122
-docID5122
-docID5122
-docID5513
-docID5973
-docID6005
-docID6006
-docID6072
-docID6072
-docID6124
-docID6290
-docID6290
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6454
-docID6461
-docID6493
-docID6493
-docID6517
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len356.26fail doc size50
-Likelihood -2068630.858 at step 7.0 converge to 0.004838...
+avg doc LenNaNfail doc size0
+Likelihood -1397799.414 at step 7.0 converge to 0.007742...
 initial stats...
-docID55
-docID78
-docID78
-docID354
-docID354
-docID364
-docID374
-docID374
-docID489
-docID577
-docID577
-docID598
-docID598
-docID698
-docID712
-docID813
-docID813
-docID813
-docID862
-docID871
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1421
-docID1421
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1544
-docID1645
-docID1725
-docID1732
-docID1732
-docID1841
-docID1841
-docID1841
-docID1936
-docID1986
-docID2823
-docID3290
-docID3290
-docID3307
-docID3309
-docID3325
-docID3632
-docID3633
-docID3647
-docID3711
-docID3849
-docID4224
-docID4224
-docID4224
-docID5122
-docID5122
-docID5973
-docID6072
-docID6152
-docID6290
-docID6398
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6454
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6463
-docID6463
-docID6467
-docID6493
-docID6493
-docID6637
-docID6945
-avg doc Len363.1224489795918fail doc size49
-Likelihood -2059992.658 at step 8.0 converge to 0.004176...
+avg doc LenNaNfail doc size0
+Likelihood -1387369.203 at step 8.0 converge to 0.007462...
 initial stats...
-docID78
-docID353
-docID354
-docID374
-docID374
-docID598
-docID698
-docID813
-docID813
-docID813
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1588
-docID1732
-docID1984
-docID1984
-docID2068
-docID2089
-docID2126
-docID3290
-docID3307
-docID3725
-docID3849
-docID4224
-docID4224
-docID4224
-docID4936
-docID5122
-docID5513
-docID5513
-docID6290
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6461
-docID6461
-docID6461
-docID6463
-docID6493
-docID6704
-docID6945
-docID6945
-avg doc Len390.6875fail doc size32
-Likelihood -2052083.063 at step 9.0 converge to 0.003840...
+avg doc LenNaNfail doc size0
+Likelihood -1378534.642 at step 9.0 converge to 0.006368...
 initial stats...
-docID55
-docID78
-docID78
-docID78
-docID353
-docID354
-docID354
-docID522
-docID577
-docID577
-docID598
-docID598
-docID671
-docID698
-docID698
-docID698
-docID813
-docID813
-docID813
-docID813
-docID813
-docID970
-docID970
-docID988
-docID1421
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1732
-docID1841
-docID1990
-docID2139
-docID2199
-docID2829
-docID3290
-docID3304
-docID3632
-docID3632
-docID3682
-docID4224
-docID4224
-docID5122
-docID5122
-docID5122
-docID5513
-docID5513
-docID6072
-docID6072
-docID6124
-docID6289
-docID6290
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6461
-docID6461
-docID6461
-docID6461
-docID6463
-docID6473
-docID6629
-docID6629
-docID6695
-docID6945
-docID6945
-avg doc Len388.5fail doc size40
-Likelihood -2044927.156 at step 10.0 converge to 0.003487...
+avg doc LenNaNfail doc size0
+Likelihood -1371565.723 at step 10.0 converge to 0.005055...
 initial stats...
-docID78
-docID353
-docID354
-docID364
-docID598
-docID598
-docID602
-docID698
-docID698
-docID712
-docID712
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1421
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1732
-docID1732
-docID1732
-docID1732
-docID1732
-docID1994
-docID2203
-docID2219
-docID3632
-docID3632
-docID3725
-docID3889
-docID4224
-docID4224
-docID5122
-docID5122
-docID5513
-docID5973
-docID6124
-docID6124
-docID6124
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6450
-docID6454
-docID6461
-docID6461
-docID6493
-docID6704
-docID6945
-docID6945
-docID6945
-avg doc Len409.5625fail doc size32
-Likelihood -2038787.313 at step 11.0 converge to 0.003002...
+avg doc LenNaNfail doc size0
+Likelihood -1366085.576 at step 11.0 converge to 0.003996...
 initial stats...
-docID78
-docID78
-docID598
-docID598
-docID612
-docID658
-docID671
-docID698
-docID698
-docID813
-docID813
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1497
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1544
-docID1749
-docID2139
-docID2139
-docID2199
-docID2823
-docID3290
-docID3290
-docID3302
-docID3307
-docID3307
-docID3307
-docID3632
-docID3682
-docID5122
-docID5513
-docID6124
-docID6124
-docID6290
-docID6290
-docID6394
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6461
-docID6466
-docID6466
-docID6642
-docID6884
-docID6884
-docID6945
-docID6945
-docID6945
-docID6945
-docID6945
-avg doc Len401.625fail doc size32
-Likelihood -2033584.171 at step 12.0 converge to 0.002552...
+avg doc LenNaNfail doc size0
+Likelihood -1361573.701 at step 12.0 converge to 0.003303...
 initial stats...
-docID78
-docID78
-docID354
-docID354
-docID354
-docID447
-docID813
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1516
-docID1516
-docID1516
-docID1615
-docID1629
-docID1678
-docID2139
-docID2139
-docID3290
-docID3290
-docID3304
-docID3632
-docID4224
-docID5122
-docID5122
-docID5973
-docID6124
-docID6124
-docID6287
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6461
-docID6461
-docID6463
-docID6466
-docID6695
-docID6945
-docID6945
-docID6945
-avg doc Len417.96153846153845fail doc size26
-Likelihood -2029066.042 at step 13.0 converge to 0.002222...
+avg doc LenNaNfail doc size0
+Likelihood -1357757.133 at step 13.0 converge to 0.002803...
 initial stats...
-docID55
-docID78
-docID78
-docID78
-docID354
-docID354
-docID436
-docID598
-docID598
-docID598
-docID698
-docID698
-docID813
-docID813
-docID813
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1516
-docID1516
-docID1516
-docID1516
-docID1537
-docID1544
-docID1595
-docID1615
-docID1615
-docID1629
-docID1732
-docID1732
-docID2139
-docID2139
-docID2220
-docID3290
-docID3290
-docID3632
-docID4224
-docID5122
-docID5122
-docID5122
-docID6124
-docID6124
-docID6438
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6450
-docID6695
-docID6945
-docID6970
-avg doc Len415.7fail doc size30
-Likelihood -2025106.642 at step 14.0 converge to 0.001951...
+avg doc LenNaNfail doc size0
+Likelihood -1354437.774 at step 14.0 converge to 0.002445...
 initial stats...
-docID78
-docID78
-docID354
-docID598
-docID598
-docID598
-docID612
-docID615
-docID698
-docID698
-docID813
-docID862
-docID871
-docID871
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1497
-docID1497
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1588
-docID1615
-docID1732
-docID1732
-docID3137
-docID3290
-docID3309
-docID3647
-docID3725
-docID3905
-docID6124
-docID6124
-docID6124
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6452
-docID6945
-docID6945
-avg doc Len411.5fail doc size26
-Likelihood -2021623.265 at step 15.0 converge to 0.001720...
+avg doc LenNaNfail doc size0
+Likelihood -1351506.222 at step 15.0 converge to 0.002164...
 initial stats...
-docID11
-docID78
-docID354
-docID374
-docID374
-docID602
-docID602
-docID612
-docID712
-docID862
-docID871
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1497
-docID1497
-docID1497
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1732
-docID2139
-docID2139
-docID3290
-docID3290
-docID3304
-docID3307
-docID3309
-docID3632
-docID3632
-docID3632
-docID3889
-docID3905
-docID5122
-docID5122
-docID6124
-docID6290
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6461
-docID6871
-docID6884
-docID6884
-docID6945
-docID6945
-docID6945
-avg doc Len415.61290322580646fail doc size31
-Likelihood -2018597.866 at step 16.0 converge to 0.001497...
+avg doc LenNaNfail doc size0
+Likelihood -1348944.535 at step 16.0 converge to 0.001895...
 initial stats...
-docID11
-docID78
-docID78
-docID78
-docID78
-docID354
-docID354
-docID354
-docID354
-docID615
-docID698
-docID712
-docID813
-docID862
-docID862
-docID862
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID970
-docID1421
-docID1497
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1544
-docID1588
-docID1732
-docID1732
-docID1732
-docID1749
-docID1827
-docID1984
-docID2052
-docID2139
-docID3290
-docID3290
-docID5122
-docID6124
-docID6124
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6448
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6449
-docID6454
-docID6458
-docID6461
-docID6467
-docID6467
-docID6468
-docID6511
-docID6945
-docID6945
-docID6945
-avg doc Len413.15625fail doc size32
-Likelihood -2015904.380 at step 17.0 converge to 0.001334...
+avg doc LenNaNfail doc size0
+Likelihood -1346687.539 at step 17.0 converge to 0.001673...
 initial stats...
-docID55
-docID78
-docID353
-docID354
-docID437
-docID577
-docID698
-docID813
-docID862
-docID862
-docID970
-docID970
-docID970
-docID970
-docID1497
-docID1497
-docID1516
-docID1516
-docID1516
-docID1516
-docID1544
-docID1595
-docID1645
+avg doc LenNaNfail doc size0
+Likelihood -1344688.099 at step 18.0 converge to 0.001485...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1342867.538 at step 19.0 converge to 0.001354...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1341213.233 at step 20.0 converge to 0.001232...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1339716.399 at step 21.0 converge to 0.001116...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1338345.836 at step 22.0 converge to 0.001023...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1337077.488 at step 23.0 converge to 0.000948...
+6134
+In Normal
+avg doc LenNaNfail doc size0
+Test set perplexity is 1302.479 and log-likelihood is -433.403
+CTM@6ff3c5b5 Train/Test finished in 415.62 seconds...
+Fold number 1
+Train Set Size 3339
+Test Set Size 800
+initial Model...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1755012.631 at step 0.0 converge to 1.000000...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1452591.128 at step 1.0 converge to 0.172319...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1439999.100 at step 2.0 converge to 0.008669...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1427908.992 at step 3.0 converge to 0.008396...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1415895.189 at step 4.0 converge to 0.008414...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1404721.049 at step 5.0 converge to 0.007892...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1394083.358 at step 6.0 converge to 0.007573...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1384122.518 at step 7.0 converge to 0.007145...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1375489.874 at step 8.0 converge to 0.006237...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1368403.972 at step 9.0 converge to 0.005152...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1362802.606 at step 10.0 converge to 0.004093...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1358314.449 at step 11.0 converge to 0.003293...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1354537.921 at step 12.0 converge to 0.002780...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1351331.538 at step 13.0 converge to 0.002367...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1348596.855 at step 14.0 converge to 0.002024...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1346207.144 at step 15.0 converge to 0.001772...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1344086.911 at step 16.0 converge to 0.001575...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1342156.644 at step 17.0 converge to 0.001436...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1340426.106 at step 18.0 converge to 0.001289...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1338847.084 at step 19.0 converge to 0.001178...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1337382.986 at step 20.0 converge to 0.001094...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1335997.399 at step 21.0 converge to 0.001036...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1334711.415 at step 22.0 converge to 0.000963...
+6134
+In Normal
+avg doc LenNaNfail doc size0
+Test set perplexity is 1331.615 and log-likelihood is -443.897
+CTM@6ff3c5b5 Train/Test finished in 1635.82 seconds...
+Fold number 2
+Train Set Size 3279
+Test Set Size 860
+initial Model...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1752101.075 at step 0.0 converge to 1.000000...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1450821.403 at step 1.0 converge to 0.171953...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1439969.827 at step 2.0 converge to 0.007480...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1431047.606 at step 3.0 converge to 0.006196...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1421864.659 at step 4.0 converge to 0.006417...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1412084.364 at step 5.0 converge to 0.006878...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1402516.448 at step 6.0 converge to 0.006776...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1393493.388 at step 7.0 converge to 0.006433...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1385280.137 at step 8.0 converge to 0.005894...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1378098.031 at step 9.0 converge to 0.005185...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1371853.727 at step 10.0 converge to 0.004531...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1366359.910 at step 11.0 converge to 0.004005...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1361556.498 at step 12.0 converge to 0.003515...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1357330.154 at step 13.0 converge to 0.003104...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1353623.418 at step 14.0 converge to 0.002731...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1350429.402 at step 15.0 converge to 0.002360...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1347626.846 at step 16.0 converge to 0.002075...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1345156.976 at step 17.0 converge to 0.001833...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1342935.956 at step 18.0 converge to 0.001651...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1340931.334 at step 19.0 converge to 0.001493...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1339098.108 at step 20.0 converge to 0.001367...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1337398.740 at step 21.0 converge to 0.001269...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1335810.075 at step 22.0 converge to 0.001188...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1334358.377 at step 23.0 converge to 0.001087...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1333045.548 at step 24.0 converge to 0.000984...
+6134
+In Normal
+avg doc LenNaNfail doc size0
+Test set perplexity is 1332.134 and log-likelihood is -416.940
+CTM@6ff3c5b5 Train/Test finished in 421.02 seconds...
+Fold number 3
+Train Set Size 3310
+Test Set Size 829
+initial Model...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1765269.233 at step 0.0 converge to 1.000000...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1461897.157 at step 1.0 converge to 0.171856...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1449156.136 at step 2.0 converge to 0.008715...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1437220.796 at step 3.0 converge to 0.008236...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1425867.509 at step 4.0 converge to 0.007899...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1415168.915 at step 5.0 converge to 0.007503...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1405484.719 at step 6.0 converge to 0.006843...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1396974.099 at step 7.0 converge to 0.006055...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1389459.295 at step 8.0 converge to 0.005379...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1382789.898 at step 9.0 converge to 0.004800...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1376961.378 at step 10.0 converge to 0.004215...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1371928.636 at step 11.0 converge to 0.003655...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1367595.393 at step 12.0 converge to 0.003159...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1363882.670 at step 13.0 converge to 0.002715...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1360691.656 at step 14.0 converge to 0.002340...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1357952.010 at step 15.0 converge to 0.002013...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1355549.550 at step 16.0 converge to 0.001769...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1353385.770 at step 17.0 converge to 0.001596...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1351429.826 at step 18.0 converge to 0.001445...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1349678.311 at step 19.0 converge to 0.001296...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1348116.375 at step 20.0 converge to 0.001157...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1346721.835 at step 21.0 converge to 0.001034...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1345439.210 at step 22.0 converge to 0.000952...
+6134
+In Normal
+avg doc LenNaNfail doc size0
+Test set perplexity is 1291.590 and log-likelihood is -417.538
+CTM@6ff3c5b5 Train/Test finished in 532.47 seconds...
+Fold number 4
+Train Set Size 3292
+Test Set Size 847
+initial Model...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1756190.990 at step 0.0 converge to 1.000000...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1453546.180 at step 1.0 converge to 0.172330...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1440339.624 at step 2.0 converge to 0.009086...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1427883.119 at step 3.0 converge to 0.008648...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1416160.373 at step 4.0 converge to 0.008210...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1404871.725 at step 5.0 converge to 0.007971...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1394022.245 at step 6.0 converge to 0.007723...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1383660.526 at step 7.0 converge to 0.007433...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1374254.560 at step 8.0 converge to 0.006798...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1366580.840 at step 9.0 converge to 0.005584...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1360865.726 at step 10.0 converge to 0.004182...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1356553.386 at step 11.0 converge to 0.003169...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1353134.745 at step 12.0 converge to 0.002520...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1350297.075 at step 13.0 converge to 0.002097...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1347869.642 at step 14.0 converge to 0.001798...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1345730.536 at step 15.0 converge to 0.001587...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1343810.675 at step 16.0 converge to 0.001427...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1342074.343 at step 17.0 converge to 0.001292...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1340494.264 at step 18.0 converge to 0.001177...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1339063.125 at step 19.0 converge to 0.001068...
+initial stats...
+avg doc LenNaNfail doc size0
+Likelihood -1337729.805 at step 20.0 converge to 0.000996...
+6134
+In Normal
+avg doc LenNaNfail doc size0
+Test set perplexity is 1272.224 and log-likelihood is -416.631
+CTM@6ff3c5b5 Train/Test finished in 459.71 seconds...
+Perplexity 1306.008+/-23.238
+Topic 0(0.031):	beef(0.019)	buck(0.014)	NUM-buck(0.012)	time(0.012)	dish(0.011)	restaur(0.010)	shake(0.009)	dinner(0.009)	holstein(0.008)	tast(0.008)
+Topic 1(0.032):	patio(0.051)	drink(0.032)	fremont(0.026)	park(0.023)	beer(0.020)	downtown(0.019)	night(0.017)	street(0.015)	chicken(0.014)	insid(0.014)
+Topic 2(0.031):	time(0.027)	price(0.024)	star(0.021)	restaur(0.020)	vega(0.019)	small(0.018)	type(0.016)	coffe(0.016)	talk(0.015)	spot(0.014)
+Topic 3(0.041):	seat(0.022)	time(0.016)	vega(0.015)	theater(0.014)	room(0.014)	park(0.013)	peopl(0.013)	town(0.012)	watch(0.011)	casino(0.011)
+Topic 4(0.032):	chicken(0.014)	bread(0.014)	kitchen(0.011)	flavor(0.011)	skin(0.011)	dish(0.010)	carson(0.009)	crispi(0.009)	perfect(0.009)	chicken-skin(0.008)
+Topic 5(0.032):	curri(0.050)	shack(0.015)	shake(0.015)	tast(0.014)	time(0.013)	flavor(0.012)	pork(0.011)	sauc(0.010)	chicken(0.009)	spice(0.009)
+Topic 6(0.031):	dinner(0.023)	friend(0.016)	dine(0.016)	night(0.015)	time(0.015)	birthday(0.014)	filet(0.013)	close(0.013)	local(0.012)	final(0.011)
+Topic 7(0.030):	brio(0.027)	chicken(0.022)	area(0.021)	delici(0.018)	side(0.014)	lobster(0.013)	dish(0.012)	busi(0.012)	bread(0.011)	park(0.010)
+Topic 8(0.031):	drink(0.054)	time(0.049)	tabl(0.037)	price(0.022)	boba(0.021)	friend(0.020)	NUM-minut(0.019)	readi(0.016)	star(0.015)	honey(0.014)
+Topic 9(0.031):	happi-hour(0.084)	happi(0.083)	time(0.035)	friend(0.017)	pretti(0.017)	wait(0.012)	NUM-pm(0.011)	definit(0.011)	spici(0.011)	margarita(0.010)
+Topic 10(0.042):	dish(0.025)	chicken(0.015)	rice(0.014)	flavor(0.013)	sauc(0.011)	thai(0.011)	restaur(0.010)	time(0.010)	beef(0.009)	fish(0.009)
+Topic 11(0.030):	lunch(0.046)	wait(0.042)	price(0.026)	star(0.026)	night(0.021)	tabl(0.020)	friend(0.020)	busi(0.018)	pretti(0.017)	definit(0.017)
+Topic 12(0.038):	chocol(0.040)	flavor(0.034)	cream(0.029)	ice-cream(0.023)	cooki(0.016)	cupcak(0.015)	sweet(0.014)	time(0.012)	tast(0.011)	gelato(0.011)
+Topic 13(0.030):	chicken(0.034)	restaur(0.028)	pretti(0.027)	beef(0.019)	shrimp(0.015)	updat(0.015)	find(0.014)	expect(0.014)	open(0.013)	chines(0.013)
+Topic 14(0.035):	pancak(0.036)	breakfast(0.029)	wait(0.020)	brunch(0.015)	benedict(0.013)	time(0.012)	velvet(0.011)	friend(0.011)	flavor(0.008)	rice(0.008)
+Topic 15(0.031):	beer(0.065)	time(0.051)	tabl(0.022)	friend(0.016)	yard(0.016)	drink(0.015)	peopl(0.014)	happi(0.014)	pretti(0.009)	birthday(0.009)
+Topic 16(0.032):	drink(0.049)	wait(0.021)	time(0.019)	friend(0.018)	night(0.018)	seat(0.015)	parti(0.012)	year(0.012)	cool(0.011)	tabl(0.011)
+Topic 17(0.031):	yelp(0.025)	uuu-uuu(0.020)	dish(0.016)	challeng(0.014)	yelp-NUM(0.014)	aloha(0.012)	super(0.012)	time(0.011)	spot(0.010)	challeng-NUM(0.009)
+Topic 18(0.037):	ramen(0.075)	broth(0.030)	bowl(0.024)	pork(0.015)	flavor(0.014)	time(0.013)	monta(0.011)	spici(0.010)	soup(0.010)	wait(0.009)
+Topic 19(0.037):	bread(0.012)	chicken(0.012)	french(0.011)	cream(0.011)	cake(0.011)	sweet(0.011)	coffe(0.010)	toast(0.009)	soup(0.009)	waffl(0.007)
+Topic 20(0.032):	shave(0.024)	flavor(0.022)	snow(0.021)	martini(0.018)	mango(0.012)	shave-ice(0.012)	black(0.011)	time(0.010)	condens(0.009)	condens-milk(0.009)
+Topic 21(0.033):	sushi(0.032)	roll(0.029)	fish(0.015)	time(0.015)	tuna(0.014)	salmon(0.013)	pork(0.011)	belli(0.011)	pork-belli(0.010)	nigiri(0.010)
+Topic 22(0.035):	pizza(0.083)	slice(0.019)	crust(0.016)	time(0.011)	mozzarella(0.010)	sauc(0.009)	meatbal(0.008)	price(0.008)	style(0.006)	pretti(0.006)
+Topic 23(0.037):	steak(0.022)	flavor(0.013)	side(0.013)	truffl(0.013)	perfect(0.013)	time(0.011)	sauc(0.010)	onion(0.010)	sweet(0.009)	cook(0.009)
+Topic 24(0.038):	chicken(0.027)	sauc(0.019)	flavor(0.016)	pork(0.012)	side(0.012)	taco(0.011)	beef(0.011)	tast(0.009)	strip(0.009)	friend(0.008)
+Topic 25(0.037):	buffet(0.038)	time(0.013)	store(0.013)	park(0.012)	shop(0.012)	station(0.011)	airport(0.010)	crab(0.010)	vega(0.009)	pretti(0.009)
+Topic 26(0.034):	crab(0.021)	sauc(0.020)	shrimp(0.015)	flavor(0.014)	spici(0.014)	sweet(0.013)	time(0.013)	truck(0.013)	wait(0.010)	juici(0.010)
+Topic 27(0.031):	shrimp(0.029)	pork(0.028)	dumpl(0.017)	cart(0.014)	dish(0.014)	serv(0.014)	steam(0.013)	pretti(0.013)	favorit(0.012)	plate(0.011)
+Topic 28(0.030):	wait(0.040)	arriv(0.026)	tabl(0.024)	sweet(0.017)	reserv(0.015)	waitress(0.013)	peopl(0.012)	sauc(0.012)	expect(0.011)	fair(0.011)
+Topic 29(0.030):	lunch(0.040)	drink(0.036)	busi(0.032)	pretti(0.032)	friend(0.027)	review(0.020)	delici(0.017)	seat(0.017)	locat(0.016)	feel(0.016)
+
+Process finished with exit code 0

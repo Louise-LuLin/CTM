@@ -16,7 +16,7 @@ import structures.MyPriorityQueue;
 import structures._RankItem;
 import utils.Utils;
 
-public class CTM {
+public class CTM{
 	protected int varMaxIter;
 	protected double varConverge;
 	protected double emMaxIter;
@@ -36,6 +36,8 @@ public class CTM {
 	public double docSize;
 
 	public ArrayList<_Doc> corpus;
+	public ArrayList<_Doc> trainset;
+	public ArrayList<_Doc> testset;
 	public _Doc[] corpusArray;
 	public ArrayList<String> features;
 	
@@ -213,7 +215,7 @@ public class CTM {
 		}
 		
 		for(int i=0; i<len1; i++){
-			Arrays.fill(word_topic_stats[i], 0);	
+			Arrays.fill(word_topic_stats[i], 1e-2);
 		}
 		
 		docSize = 0;
@@ -245,7 +247,7 @@ public class CTM {
 	//	System.out.println("initial doc...");
 	}
 	
-	public double E_step(boolean resetDocParam) {
+	public double E_step(boolean resetDocParam, ArrayList<_Doc> currentCorpus) {
 		String LambdaFile = "Lambda.dat";
 		double total = 0;
 		try{
@@ -255,7 +257,7 @@ public class CTM {
 		
 		double curLikelihood = 0.0;
 		int docID = 0;
-		for(_Doc d: corpus){
+		for(_Doc d: currentCorpus){
 			//initDoc(d, resetDocParam);
 			curLikelihood = varInference(d, lineSearchFailDoc);
 			updateStats(d);
@@ -454,14 +456,14 @@ public class CTM {
 			x_g[i] = 0;
 		} 
 
-		double eps = 1e-6;
+		double eps = 1e-3;
 
 		//Arrays.fill(x_diag, 0);
 
 		try{
 			do{
 				fValue = calcLambdaFuncGradient(doc, x, x_g);
-				LBFGS.lbfgs(xSize, 4, x, fValue, x_g, false, x_diag, iprint, eps, 1e-32, iflag);
+				LBFGS.lbfgs(xSize, 4, x, fValue, x_g, false, x_diag, iprint, eps, 1e-16, iflag);
 
 			}while(iflag[0]!=0);
 
@@ -633,15 +635,13 @@ public class CTM {
 		}
 		
 	}
-	
-	
 
 	public void EM(){
 		initModel();
 		initStats();
 		boolean resetDocParam = true;
 		int docID = 0;
-		for(_Doc d: corpus){
+		for(_Doc d: trainset){
 			
 			initDoc(d, resetDocParam);
 		//	System.out.println("docID..."+ docID);
@@ -655,7 +655,7 @@ public class CTM {
 		
 		//boolean resetDocParam = true;
 		do{
-			curTotal = E_step(resetDocParam);
+			curTotal = E_step(resetDocParam, trainset);
 			if(iter >0)
 				converge = (oldTotal-curTotal)/oldTotal;
 			else
@@ -686,6 +686,99 @@ public class CTM {
 		finalEst();
 	}
 
+	//k-fold Cross Validation.
+	public void crossValidation(int k) {
+		trainset = new ArrayList<_Doc>();
+		testset = new ArrayList<_Doc>();
+
+		double[] perp = new double[k];
+        double[] like = new double[k];
+		int[] mask = new int[corpus.size()];
+
+		Random rand = new Random();
+		for(int i=0; i< mask.length; i++) {
+			mask[i] = rand.nextInt(k);
+		}
+		ArrayList<_Doc> docs = corpus;
+		//Use this loop to iterate all the ten folders, set the train set and test set.
+		for (int i = 0; i < k; i++) {
+			for (int j = 0; j < mask.length; j++) {
+				if( mask[j]==i )
+					testset.add(docs.get(j));
+				else
+					trainset.add(docs.get(j));
+			}
+
+			System.out.println("Fold number "+i);
+			System.out.println("Train Set Size "+trainset.size());
+			System.out.println("Test Set Size "+testset.size());
+
+			long start = System.currentTimeMillis();
+			//train
+			EM();
+
+			//test
+            double[] results = Evaluation();
+            perp[i] = results[0];
+            like[i] = results[1];
+
+			System.out.format("%s Train/Test finished in %.2f seconds...\n", this.toString(), (System.currentTimeMillis()-start)/1000.0);
+			trainset.clear();
+			testset.clear();
+		}
+
+		//output the performance statistics
+		double mean = Utils.sumOfArray(perp)/k, var = 0;
+		for(int i=0; i<perp.length; i++)
+			var += (perp[i]-mean) * (perp[i]-mean);
+		var = Math.sqrt(var/k);
+		System.out.format("Perplexity %.3f+/-%.3f\n", mean, var);
+
+        mean = Utils.sumOfArray(like)/k;
+        var = 0;
+        for(int i=0; i<like.length; i++)
+            var += (like[i]-mean) * (like[i]-mean);
+        var = Math.sqrt(var/k);
+        System.out.format("Loglikelihood %.3f+/-%.3f\n", mean, var);
+    }
+
+	public int getTotalLength(){
+		int length = 0;
+		for(_Doc d:testset){
+			length += d.getTotalLength();
+		}
+		return length;
+	}
+
+	public double[] Evaluation() {
+        double[] results = new double[2];
+		double perplexity = 0, loglikelihood=0, log2 = Math.log(2.0), sumLikelihood = 0;
+		double totalWords = 0.0;
+
+		System.out.println("In Normal");
+		boolean resetDocParam = true;
+		int docID = 0;
+		for(_Doc d: testset){
+			initDoc(d, resetDocParam);
+			//	System.out.println("docID..."+ docID);
+			docID += 1;
+		}
+
+		loglikelihood = E_step(resetDocParam, testset);
+		sumLikelihood += loglikelihood;
+		perplexity += loglikelihood;
+		totalWords += getTotalLength();
+
+		perplexity /= totalWords;
+		perplexity = Math.exp(-perplexity);
+		sumLikelihood /= testset.size();
+        results[0] = perplexity;
+        results[1] = sumLikelihood;
+		System.out.format("Test set perplexity is %.3f and log-likelihood is %.3f\n", perplexity, sumLikelihood);
+
+		return results;
+	}
+
 	public void readVocabulary(String fileName){
 		String line = null;
 		
@@ -698,7 +791,7 @@ public class CTM {
 				//corpusSize += 1;
 				String[] tokens = line.split("\t");
 				//int tokensLen = tokens.length;
-				int terms = Integer.parseInt(tokens[1]);
+//				int terms = Integer.parseInt(tokens[1]);
 				String word = tokens[0];
 				//_Doc d = new _Doc(terms);// to do
 				//vocabulary_size += terms;
@@ -708,7 +801,7 @@ public class CTM {
 			}
 			//System.out.println("size of features"+features.size()+vocabulary_size);
 			vocabulary_size = features.size();
-		//	System.out.println("size of features"+features.size()+vocabulary_size);
+			System.out.println("size of features "+features.size());
 			bufferReader.close();
 
 		}catch(FileNotFoundException ex){
@@ -736,7 +829,7 @@ public class CTM {
 			while((line=bufferReader.readLine())!=null){
 				double docLength = 0.0;
 				corpusSize += 1;
-				String[] tokens = line.split("\t");
+				String[] tokens = line.split(" ");
 
 				int tokensLen = tokens.length;
 				int terms = Integer.parseInt(tokens[0]);
@@ -746,6 +839,9 @@ public class CTM {
 				//vocabulary_size += terms;
 				
 				for(int i=1; i<tokensLen; i++){
+					if(tokens[i].startsWith("#")){
+						continue;
+					}
 					String[] words = tokens[i].split(":");
 					
 					int wordIndex = Integer.parseInt(words[0]);
@@ -795,14 +891,14 @@ public class CTM {
 	
 	public void finalEst(){
 		
-		System.out.print(vocabulary_size);
+		System.out.println(vocabulary_size);
 		String finalLambdaFile = "finalLambda.dat";
 
 		int numLambda = 0;
 		try{
 			PrintStream out = new PrintStream(new File(finalLambdaFile));
 		
-			for (_Doc doc : corpus) {
+			for (_Doc doc : trainset) {
 				estThetaInDoc(doc);
 				
 				if (numLambda >= 7000) {
@@ -823,8 +919,7 @@ public class CTM {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	protected void estThetaInDoc(_Doc doc){
 
 		double sum = 0;
@@ -860,41 +955,44 @@ public class CTM {
 				out.println(log_beta[i][n]);
 			}
 		}
-//		Arrays.fill(m_sstat, 0);
-//		for(_Doc d:corpus) {
-//			for(int i=0; i<len1; i++)
-//				m_sstat[i] += logSpace?Math.exp(d.m_topics[i]):d.m_topics[i];
-//		}
-//		Utils.L1Normalization(m_sstat);			
-//		
-//		for(int i=0; i<log_beta.length; i++) {
-//			MyPriorityQueue<_RankItem> fVector = new MyPriorityQueue<_RankItem>(k);
-//			for(int j = 0; j < vocabulary_size; j++)
-//				//fVector.add(new _RankItem((j), log_beta[i][j]));
-//				fVector.add(new _RankItem(features.get(j), log_beta[i][j]));
-//			System.out.format("Topic %d(%.3f):\t", i, m_sstat[i]);
-//			for(_RankItem it:fVector)
-//				System.out.format("%s(%.3f)\t", it.m_name, logSpace?Math.exp(it.m_value):it.m_value);
-//			System.out.println();
-//		}
+		Arrays.fill(m_sstat, 0);
+		for(_Doc d:corpus) {
+			for(int i=0; i<len1; i++)
+				m_sstat[i] += logSpace?Math.exp(d.m_topics[i]):d.m_topics[i];
+		}
+		Utils.L1Normalization(m_sstat);
+
+		for(int i=0; i<log_beta.length; i++) {
+			MyPriorityQueue<_RankItem> fVector = new MyPriorityQueue<_RankItem>(k);
+			for(int j = 0; j < vocabulary_size; j++)
+				//fVector.add(new _RankItem((j), log_beta[i][j]));
+				fVector.add(new _RankItem(features.get(j), log_beta[i][j]));
+			System.out.format("Topic %d(%.3f):\t", i, m_sstat[i]);
+			for(_RankItem it:fVector)
+				System.out.format("%s(%.3f)\t", it.m_name, logSpace?Math.exp(it.m_value):it.m_value);
+			System.out.println();
+		}
 		
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException{
 		PrintStream out = new PrintStream(new FileOutputStream(
-				"output_CTM_v2.txt"));
-		System.setOut(out);
+				"output_CTM_v1.txt"));
+//		System.setOut(out);
 		
-		String formatFileName = "input/standardFile.dat";
-		String vocFileName = "input/vocab.dat";
+		String formatFileName = "input/yelp_40_50_12.dat";
+		String vocFileName = "input/fv_2gram_IG_yelp_byUser_30_50_25.txt";
+//        String formatFileName = "input/standardFile.dat";
+//        String vocFileName = "input/vocab.txt";
 		
 		int vocabulary_sizeArg = 0; 
 		int number_of_topics=30;
-		
+		int crossV = 5;
+
 		int varMaxIterArg=20;
 		double varConvergeArg=1e-6;
 		
-		int emMaxIterArg=1000;
+		int emMaxIterArg=100;
 		double emConvergeArg=1e-3;
 		
 		double cgConvergeArg=1e-6;
@@ -902,9 +1000,15 @@ public class CTM {
 				varMaxIterArg, varConvergeArg, emMaxIterArg, emConvergeArg,cgConvergeArg);
 		ctmModel.readData(formatFileName);
 		ctmModel.readVocabulary(vocFileName);
-		ctmModel.EM();
-		//int k=10;
-		//ctmModel.printTopWords(k);
+        System.out.println("Data loaded.");
+		if (crossV<=1) {
+			ctmModel.trainset = ctmModel.corpus;
+			ctmModel.EM();
+		}else{
+			ctmModel.crossValidation(crossV);
+		}
+		int k=10;
+		ctmModel.printTopWords(k);
 	}
 
 }
